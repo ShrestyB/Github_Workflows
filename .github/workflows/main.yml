@@ -17,7 +17,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ap-south-1  # Use the correct AWS region code for Mumbai
+          aws-region: ap-south-1  
 
       - name: Deploy Static Site
         run: aws s3 sync . s3://shresty-github --delete --exclude ".git/*"
